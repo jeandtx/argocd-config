@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/PontusAL/travail-tabarnak.git
+    repoURL: https://github.com/jeandtx/argocd-config.git
     targetRevision: HEAD
     path: submission
   destination:
