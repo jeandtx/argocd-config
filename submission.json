@@ -1,5 +1,7 @@
 {
-  "complete_name": "John Doe",
-  "NIP": "111 111 111",
-  "fa_codes": ["FA1", "FA2", "FA21", "FA22"]
+	"complete_name": "Doutriaux Jean",
+	"complete_name2": "Pontus ",
+	"NIP": "537 316 169",
+	"NIP2": "XXX XXX XXX",
+	"fa_codes": ["FA1", "FA41"]
 }

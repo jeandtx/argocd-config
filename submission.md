@@ -1,18 +1,17 @@
 # Description de la remise
 
-### Nom complet: XXXXX
+### Nom complet: Doutriaux Jean
+
+### NIP: 537 316 169
+
+### Nom complet: Pontus
 
 ### NIP: 111 111 111
 
 ### Liste des codes et descriptions des fonctionnalités sélectionnées:
 
-Exemple:
-
--   (FA2) Intégration du Service Mesh Consul-Connect ==> 5%
--   (FA21) Intégration de la fonctionnalité de Service Discovery de Consul-Connect ==> 5%
--   (FA22) Observabilité des services et de leurs états (healthcheck) au travers du UI de Consul ==> 5%
--   (FA23) Définition d'Intentions limitant la communication entre les services au strict nécessaire ==> 10%
--   (FA24) Configuration de Canary Deployment et/ou Blue-green/A-B Deployment ==> 10%
+-   (FA1) Sécuriser et encrypter les communications au travers de certificats SSL. ==> 10%
+-   (FA41) Intégration d’un système de Continuous Delivery (ArgoCD, ...) ==> 15%
 
 ### Directives nécessaires à la correction
 
@@ -32,7 +31,14 @@ Exemple:
     kubectl create namespace argocd
     kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     ```
+    Ensuite pour vérifier le statut de argocd on peut utiliser la commande suivante, de sorte à récuperer le dashboard sur https://localhost:8081
+    ```bash
+    kubectl port-forward -n argocd svc/argocd-server 8081:80
+    ```
+    le mot de passe par défault s'obtient avec la commande suivante
+    ```bash
+    k get secret argocd-initial-admin-secret -n argocd -o yaml
+    ```
+-   Un fichier yaml est en dehors du dossier submission car il doit être situé à la racine du projet (argocd)
 
 ### Commentaires généraux:
-
-XXXXX
