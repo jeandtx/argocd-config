@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: logic-api
+    labels:
+        app: logic-api
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: logic-api
+    template:
+        metadata:
+            labels:
+                app: logic-api
+        spec:
+            containers:
+                - name: logic-api
+                  image: jeandtx/logic-api:submission
+                  ports:
+                      - containerPort: 5000
+                  livenessProbe:
+                      httpGet:
+                          path: /health
+                          port: 5000
+                      initialDelaySeconds: 15
+                      timeoutSeconds: 1
+                      periodSeconds: 10
+                      failureThreshold: 30
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: logic-api
+spec:
+    selector:
+        app: logic-api
+    ports:
+        - protocol: TCP
+          port: 5000
+          targetPort: 5000
+    type: ClusterIP
