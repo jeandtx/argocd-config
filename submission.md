@@ -39,6 +39,10 @@
     ```bash
     k get secret argocd-initial-admin-secret -n argocd -o yaml
     ```
+    Enfin, on peut appliquer le fichier yaml de argocd
+    ```bash
+    kubectl apply -f application.yaml
+    ```
 -   Un fichier yaml est en dehors du dossier submission car il doit être situé à la racine du projet (argocd)
 
 ### Commentaires généraux:
