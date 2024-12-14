@@ -1,12 +1,12 @@
 # Description de la remise
 
-### Nom complet: Doutriaux Jean
+### Nom complet: Doutriaux, Jean
 
 ### NIP: 537 316 169
 
-### Nom complet: Pontus
+### Nom complet: Atuma Löfgren, Pontus
 
-### NIP: 111 111 111
+### NIP: 537 319 084
 
 ### Liste des codes et descriptions des fonctionnalités sélectionnées:
 
